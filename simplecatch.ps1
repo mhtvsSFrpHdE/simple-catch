@@ -1,12 +1,12 @@
 function SimpleCatch {
     param (
         $errorObject,
-        [switch]$exitTag = $false
+        [switch]$Exit = $false
     )
 
     Write-Output $errorObject | Format-List -Force
 
-    if ($exitTag){
+    if ($Exit){
         exit 1
     }
 }
